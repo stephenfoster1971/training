@@ -1,0 +1,14 @@
+# Configure the DNSimple provider
+provider "dnsimple" {
+    token = "faketoken"
+    email = "fake_email@email.com"
+}
+
+# Add a record
+resource "dnsimple_record" "foobar" {
+    domain = "terraform.rocks"
+    name = "stevefoster"
+    value = "${aws_instance.web.0.public_ip}"
+    type = "A"
+    ttl = 3600
+}
