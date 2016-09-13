@@ -39,7 +39,7 @@ resource "aws_instance" "web" {
   instance_type = "t2.micro"
   subnet_id = "subnet-51ab1e09"
   vpc_security_group_ids = ["sg-01272d66"]
-  count = "2"
+  count = "1"
 
   tags {
    Identity = "capgemini-e4da3b7fbbce2345d7772b0674a318d5"
